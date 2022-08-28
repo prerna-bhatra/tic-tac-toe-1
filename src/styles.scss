@@ -1,0 +1,60 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.main-header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .status {
+    display: flex;
+    .player-1 {
+      margin-right: 50px;
+      display: flex;
+      justify-content: space-evenly;
+      h1 {
+        color: #2982dd;
+        // font-size: 20px;
+      }
+    }
+    .player-2 {
+      margin-left: 60px;
+      display: flex;
+      justify-content: space-evenly;
+      h1 {
+        color: #dd2929;
+        // font-size: 20px;
+      }
+    }
+  }
+
+  table td {
+    border: 1px solid grey;
+    width: 100px;
+    height: 100px;
+    // font-size: 20px;
+    padding: 5px;
+    
+  }
+}
+
+
+.colorBlue {
+  color: #2982dd;
+}
+
+.colorRed {
+  color: #dd2929;
+}
+
+.colorGrenn{
+  color: #7fcd71;
+}
