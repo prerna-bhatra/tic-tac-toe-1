@@ -80,7 +80,7 @@ const TicTacToe = () => {
     const isGamnOver = isGameOverFun(squares);
 
     if (isGamnOver) {
-      alert("Game Over , it's a tie");
+      alert("Game Over ");
       setCells(Array(9).fill(""));
       setTurn("x");
       return 0;
@@ -93,13 +93,13 @@ const TicTacToe = () => {
     setCells(Array(9).fill(""));
   };
 
-  const Cell = ({ num }) => {
-    return (
-      <td className={cells[num]==="x"?"colorBlue":"colorRed"}onClick={() => handleClick(num)}>
-        {cells[num]}
-      </td>
-    );
-  };
+  // const Cell = ({ num }) => {
+  //   return (
+  //     <td className={cells[num]==="x"?"colorBlue":"colorRed"  }onClick={() => handleClick(num)}>
+  //       {cells[num]}
+  //     </td>
+  //   );
+  // };
 
   return (
     <div className="container">
@@ -128,19 +128,66 @@ const TicTacToe = () => {
       <table>
         <tbody>
           <tr>
-            <Cell num={0} />
-            <Cell num={1} />
-            <Cell num={2} />
+            <td
+              className={cells[0] === "x" ? "colorBlue" : "colorRed"}
+              onClick={() => handleClick(0)}
+            >
+              {cells[0]}
+            </td>
+            <td
+              className={cells[1] === "x" ? "colorBlue vert" : "colorRed vert"}
+              onClick={() => handleClick(1)}
+            >
+              {cells[1]}
+            </td>
+            <td
+              className={cells[2] === "x" ? "colorBlue" : "colorRed"}
+              onClick={() => handleClick(2)}
+            >
+              {cells[2]}
+            </td>
           </tr>
           <tr>
-            <Cell num={3} />
-            <Cell num={4} />
-            <Cell num={5} />
+            <td
+              className={cells[3] === "x" ? "colorBlue hori" : "colorRed hori"}
+              onClick={() => handleClick(3)}
+            >
+              {cells[3]}
+            </td>
+            <td
+              className={
+                cells[4] === "x" ? "colorBlue  hori vert" : "colorRed hori vert"
+              }
+              onClick={() => handleClick(4)}
+            >
+              {cells[4]}
+            </td>
+            <td
+              className={cells[5] === "x" ? "colorBlue hori" : "colorRed hori"}
+              onClick={() => handleClick(5)}
+            >
+              {cells[5]}
+            </td>
           </tr>
           <tr>
-            <Cell num={6} />
-            <Cell num={7} />
-            <Cell num={8} />
+            <td
+              className={cells[6] === "x" ? "colorBlue" : "colorRed"}
+              onClick={() => handleClick(6)}
+            >
+              {cells[6]}
+            </td>
+            <td
+              className={cells[7] === "x" ? "colorBlue vert" : "colorRed vert"}
+              onClick={() => handleClick(7)}
+            >
+              {cells[7]}
+            </td>
+            <td
+              className={cells[8] === "x" ? "colorBlue" : "colorRed"}
+              onClick={() => handleClick(8)}
+            >
+              {cells[8]}
+            </td>
           </tr>
         </tbody>
       </table>
